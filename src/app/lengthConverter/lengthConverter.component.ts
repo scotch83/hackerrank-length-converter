@@ -35,7 +35,7 @@ export class LengthConverter {
   }
   public set selectedOptionFrom(value: number) {
     this._selectedOptionFrom = value;
-    this._toMeasure = this.convertMeasure(this._fromMeasure, this.lengthOptions[this.selectedOptionFrom], this.lengthOptions[this.selectedOptionTo])
+    this._fromMeasure = this.convertMeasure(this._toMeasure, this.lengthOptions[this.selectedOptionTo], this.lengthOptions[this.selectedOptionFrom]);
   }
 
 
@@ -45,7 +45,7 @@ export class LengthConverter {
   }
   public set selectedOptionTo(value: number) {
     this._selectedOptionTo = value;
-    this._fromMeasure = this.convertMeasure(this._toMeasure, this.lengthOptions[this.selectedOptionTo], this.lengthOptions[this.selectedOptionFrom]);
+    this._toMeasure = this.convertMeasure(this._fromMeasure, this.lengthOptions[this.selectedOptionFrom], this.lengthOptions[this.selectedOptionTo])
   }
 
   private _fromMeasure: number;
@@ -84,7 +84,7 @@ export class LengthConverter {
       case 'km':
         return _fromMeasure / 1000;
       case 'cm':
-        return _fromMeasure * 1000;
+        return _fromMeasure * 100;
       case 'm':
         return _fromMeasure;
     }
