@@ -97,7 +97,7 @@ export class LengthConverter {
       case 'cm':
         return _fromMeasure;
       case 'm':
-        return _fromMeasure / 1000;
+        return _fromMeasure / 100;
     }
   }
 
