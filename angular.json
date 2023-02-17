@@ -115,6 +115,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "lengthConverter"
+    }
+  },
+  "defaultProject": "lengthConverter",
+  "cli": {
+    "analytics": false
+  }
 }
